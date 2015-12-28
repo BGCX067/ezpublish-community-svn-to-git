@@ -1,0 +1,22 @@
+#labels Phase-Implementation
+#Instructions for making eZ Publish community builds
+
+= Introduction =
+
+The eZ Publish community releases are currently built from the stable branches in the public mirror of eZ Systems' eZ Publish repository:
+
+  * http://pubsvn.ez.no/nextgen/stable/4.1/
+  * http://pubsvn.ez.no/nextgen/stable/4.2/
+
+We are also using the official build script, bin/shell/makedist.sh, and its related scripts, with a few modifications though, which are explained further below.
+
+
+= Details =
+
+Unfortunately certain scripts used in the build procedure contain hard coded paths to resources which are not publicly accessible without authenticating. We reported each of them separately to eZ Systems in their issue tracker, together with suggested solutions:
+
+  * [http://issues.ez.no/16579 #16579]: bin/php/checkdbfiles.php contains hardcoded inaccessible svn repository path
+  * [http://issues.ez.no/16580 #16580]: bin/shell/checkdbupdate.sh contains hardcoded inaccessible svn repository path
+  * [http://issues.ez.no/16581 #16581]: Open up the GPL dir of the license server used by the build scripts
+
+The first 2 issues we have temporarily solved by simply replacing the paths with their equivalent paths on the public mirror of the eZ Publish repository on pubsvn. The 3rd issue required some reverse engineering to provide similar files with GPL license data. These reverse engineered license data files are now available from this project's Subversion repository: http://ezpublish-community.googlecode.com/svn/trunk/licenses/.

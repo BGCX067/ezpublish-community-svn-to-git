@@ -1,0 +1,9 @@
+This copy of eZ Publish is distributed under the terms and conditions of
+the GNU General Public License (GPL). Briefly summarized, the GPL gives
+you the right to use, modify and share this copy of eZ Publish. If you
+choose to share eZ Publish, you may only share it under the terms and
+conditions of the GPL. If you share a modified version of eZ Publish,
+these modifications must also be placed under the GPL. Read the
+complete legal terms and conditions of the GPL at
+http://www.gnu.org/licenses/gpl.txt or see the file named LICENSE in
+the root directory of this eZ Publish distribution.
